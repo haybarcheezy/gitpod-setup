@@ -1,0 +1,8 @@
+#!/bin/bash
+git clone https://github.com/JesterOrNot/Gitpod-Setup.git
+cd Gitpod-Setup || exit
+go get -v -t -d ./...
+go build -o gp-setup *.go
+mv gp-setup "$GOPATH"/bin
+cd ..;
+rm -rf "Gitpod-Setup";
